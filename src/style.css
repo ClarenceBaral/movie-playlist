@@ -78,6 +78,11 @@ button:hover {
   color: white;
 }
 
+.button {
+  display: flex;
+  gap: 10px;
+}
+
 
 /* MOVIE SECTION */
 section {
@@ -92,15 +97,15 @@ section h2 {
 
 /* MOVIES */
 .Movies {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
   gap: 15px;
-  overflow-x: auto;
+  overflow: visible;
 }
-
 
 /* MOVIE PICTURES */
 .Movies img {
-  width: 240px;
+  width: 100%;
   height: 135px;
   object-fit: cover;
   border-radius: 5px;
@@ -108,24 +113,7 @@ section h2 {
   transition: transform 0.3s ease;
 }
 
-
-/* HOVER EFFECT */
 .Movies img:hover {
-  transform: scale(1.08);
-}
-
-
-/* SCROLLBAR */
-.Movies::-webkit-scrollbar {
-  height: 6px;
-}
-
-.Movies::-webkit-scrollbar-track {
-  background: #222;
-}
-
-.Movies::-webkit-scrollbar-thumb {
-  background: #555;
-  border-radius: 10px;
+  transform: scale(1.05);
 }
 
